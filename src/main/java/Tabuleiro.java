@@ -9,6 +9,7 @@ class Tabuleiro
         return coluna - 'a';
     }
 
+
     private int linhaParaIndice(int linha)
     {
         return 8 - linha;
@@ -40,6 +41,7 @@ class Tabuleiro
             casas[1][j] = new Peao("P" + (j + 1) + "p").getNome();
         }
 
+
         casas[7][0] = new Torre("T1b").getNome();
         casas[7][1] = new Cavalo("H1b").getNome();
         casas[7][2] = new Bispo("B1b").getNome();
@@ -68,6 +70,11 @@ class Tabuleiro
         System.out.println();
     }
 
+    public boolean acabouOJogo()
+    {
+        return false;
+    }
+
     public boolean casaLivre(String casa)
     {
         char coluna = casa.charAt(0);
@@ -83,6 +90,7 @@ class Tabuleiro
         int linha = Character.getNumericValue(casaDestino.charAt(1));
         int colDest = colunaParaIndice(coluna);
         int linDest = linhaParaIndice(linha);
+
 
         int linOrigem = -1;
         int colOrigem = -1;

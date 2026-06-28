@@ -1,0 +1,4 @@
+interface Jogo
+{
+    void iniciar();
+}
